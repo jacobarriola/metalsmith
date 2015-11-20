@@ -1,5 +1,8 @@
-var Metalsmith = require('metalsmith');
+var Metalsmith  = require('metalsmith'),
+    markdown    = require('metalsmith-markdown');
 
 Metalsmith(__dirname)
-    .destination('./build')
-    .build();
+  .use(markdown())
+  .build(function(err) {
+    if (err) throw err;
+  });
