@@ -1,8 +1,18 @@
-var Metalsmith  = require('metalsmith'),
-    markdown    = require('metalsmith-markdown');
+var metalsmith  = require('metalsmith'),
+    markdown    = require('metalsmith-markdown'),
+    inplace    = require('metalsmith-in-place'),
+    layouts     = require('metalsmith-layouts');
 
-Metalsmith(__dirname)
+/**
+ * Build
+ */
+
+metalsmith(__dirname)
   .use(markdown())
+  .use(layouts({
+    engine:'handlebars',
+    partials: 'partials'
+  }))
   .build(function(err) {
     if (err) throw err;
   });
