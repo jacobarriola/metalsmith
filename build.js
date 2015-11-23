@@ -16,17 +16,24 @@ metalsmith(__dirname)
       title: 'Jacob Arriola'
     }
   })
+  .use(collections({
+    posts: {
+      pattern: 'posts/*.md'
+    }
+  }))
   .use(markdown())
+  .use(permalinks({
+    pattern: ':title'
+  }))
   .use(layouts({
     engine:'handlebars',
     partials: 'partials'
   }))
   .use(serve({
-    port: 8080,
     verbose: true
   }))
   .use(watch({
-    pattern: '**/*',
+
     livereload: true
   }))
   .build(function(err) {

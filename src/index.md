@@ -1,5 +1,5 @@
 ---
 title: Home
 layout: layout.hbs
+permalink: false
 ---
-Hello, World!!
