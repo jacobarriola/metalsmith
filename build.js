@@ -5,6 +5,7 @@ var metalsmith  = require('metalsmith'),
     permalinks  = require('metalsmith-permalinks'),
     serve       = require('metalsmith-serve'),
     sass        = require('metalsmith-sass'),
+    autoprefix  = require('metalsmith-autoprefixer'),
     excerpts    = require('metalsmith-excerpts'),
     watch       = require('metalsmith-watch');
 
@@ -23,6 +24,7 @@ metalsmith(__dirname)
     sourceMap: true,
     sourceMapContents: true
   }))
+  .use(autoprefix())
   .use(collections({
     posts: {
       pattern: 'posts/*.md'
