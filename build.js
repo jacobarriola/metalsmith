@@ -5,6 +5,7 @@ var metalsmith  = require('metalsmith'),
     permalinks  = require('metalsmith-permalinks'),
     serve       = require('metalsmith-serve'),
     sass        = require('metalsmith-sass'),
+    excerpts    = require('metalsmith-excerpts'),
     watch       = require('metalsmith-watch');
 
 /**
@@ -20,7 +21,7 @@ metalsmith(__dirname)
   .use(sass({
     outputDir: 'css/',
     sourceMap: true,
-    sourceMapContents: true 
+    sourceMapContents: true
   }))
   .use(collections({
     posts: {
@@ -31,6 +32,7 @@ metalsmith(__dirname)
   .use(permalinks({
     pattern: ':title'
   }))
+  .use(excerpts())
   .use(layouts({
     engine:'handlebars',
     partials: 'partials'
