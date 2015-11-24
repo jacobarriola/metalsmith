@@ -4,6 +4,7 @@ var metalsmith  = require('metalsmith'),
     collections = require('metalsmith-collections'),
     permalinks  = require('metalsmith-permalinks'),
     serve       = require('metalsmith-serve'),
+    sass        = require('metalsmith-sass'),
     watch       = require('metalsmith-watch');
 
 /**
@@ -16,6 +17,11 @@ metalsmith(__dirname)
       title: 'Jacob Arriola'
     }
   })
+  .use(sass({
+    outputDir: 'css/',
+    sourceMap: true,
+    sourceMapContents: true 
+  }))
   .use(collections({
     posts: {
       pattern: 'posts/*.md'
