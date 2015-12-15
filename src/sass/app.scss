@@ -1,3 +1,43 @@
-body {
-  background: green;
+@function is-cool-color($color) {
+	@return hue($color) < 300 and hue($color) > 120;
+}
+
+@function harmonious-mix($mix, $base) {
+	@if (is-cool-color($mix)){
+		@return mix($mix, $base, 9%);
+	}
+	@else {
+		@return mix($mix, $base, 35%);
+	}
+}
+
+$first-color: hsl(208, 100%, 50%);
+$second-color: complement($first-color);
+$complementary-color: harmonious-mix($first-color, $second-color);
+$primary-color: harmonious-mix($second-color, $first-color);
+
+
+
+
+.color-block {
+  display: inline-block;
+  width: 5em;
+  height: 5em;
+  border-radius: 2px;
+}
+
+.first-color {
+  background: $first-color;
+}
+
+.second-color {
+  background: $second-color;
+}
+
+.primary-color {
+  background: $primary-color;
+}
+
+.secondary-color {
+  background: $complementary-color;
 }

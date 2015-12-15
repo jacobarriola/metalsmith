@@ -7,6 +7,8 @@ var metalsmith  = require('metalsmith'),
     sass        = require('metalsmith-sass'),
     autoprefix  = require('metalsmith-autoprefixer'),
     excerpts    = require('metalsmith-excerpts'),
+    prefix      = require('metalsmith-prefix'),
+    request     = require('metalsmith-request'),
     watch       = require('metalsmith-watch');
 
 /**
@@ -38,6 +40,10 @@ metalsmith(__dirname)
   .use(layouts({
     engine:'handlebars',
     partials: 'partials'
+  }))
+  .use(prefix({
+    prefix: 'metalsmith',
+    selector: 'link, script, a, img'
   }))
   .use(serve({
     verbose: true

@@ -1,6 +1,5 @@
 ---
-title: 404
+title: Colors
 layout: 404.hbs
-permalink: false
 ---
 This is the 404 page, yo~
