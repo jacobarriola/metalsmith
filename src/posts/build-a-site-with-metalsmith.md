@@ -6,4 +6,18 @@ collection: posts
 tags: demo, wordpress
 ---
 
-An interesting post about how it's going to be different this time around. I'm going write a lot more nowadays and use this blog to improve my writing. yes
+I've rebuilt my site using a static site generator.
+
+## Why
+
+## Steps
+
+### Step 1
+Start with a skeleton project of `build.js`, `package.json`, and `src/` directory
+
+### Step 2: create layouts
+
+### Step 3: create partials
+
+### Step 4: add your plugins
+Collections, layouts
