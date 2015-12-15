@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "app.css",
+	"sources": [
+		"app.scss"
+	],
+	"sourcesContent": [
+		"@function is-cool-color($color) {\n\t@return hue($color) < 300 and hue($color) > 120;\n}\n\n@function harmonious-mix($mix, $base) {\n\t@if (is-cool-color($mix)){\n\t\t@return mix($mix, $base, 9%);\n\t}\n\t@else {\n\t\t@return mix($mix, $base, 35%);\n\t}\n}\n\n$first-color: hsl(208, 100%, 50%);\n$second-color: complement($first-color);\n$complementary-color: harmonious-mix($first-color, $second-color);\n$primary-color: harmonious-mix($second-color, $first-color);\n\n\n\n\n.color-block {\n  display: inline-block;\n  width: 5em;\n  height: 5em;\n  border-radius: 2px;\n}\n\n.first-color {\n  background: $first-color;\n}\n\n.second-color {\n  background: $second-color;\n}\n\n.primary-color {\n  background: $primary-color;\n}\n\n.secondary-color {\n  background: $complementary-color;\n}\n"
+	],
+	"mappings": "AAqBA,YAAY,AAAC,CACX,OAAO,CAAE,YAAa,CACtB,KAAK,CAAE,GAAI,CACX,MAAM,CAAE,GAAI,CACZ,aAAa,CAAE,GAAI,CACpB,AAED,YAAY,AAAC,CACX,UAAU,CAhBE,IAAG,CAiBhB,AAED,aAAa,AAAC,CACZ,UAAU,CAnBG,IAAU,CAoBxB,AAED,cAAc,AAAC,CACb,UAAU,CA5BF,OAAG,CA6BZ,AAED,gBAAgB,AAAC,CACf,UAAU,CAnCF,OAAG,CAoCZ",
+	"names": []
+}
