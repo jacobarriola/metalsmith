@@ -1,5 +1,5 @@
 ---
 title: Colors
-layout: 404.hbs
+layout: page.hbs
+permalink: false
 ---
-This is the 404 page, yo~
