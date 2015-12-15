@@ -44,10 +44,10 @@ metalsmith(__dirname)
     engine:'handlebars',
     partials: 'partials'
   }))
-  // .use(prefix({
-  //   prefix: 'metalsmith',
-  //   selector: 'link, script, a, img'
-  // }))
+  .use(prefix({
+    prefix: 'metalsmith',
+    selector: 'link, script, a, img'
+  }))
   .use(serve({
     verbose: true
   }))
