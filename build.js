@@ -29,7 +29,9 @@ metalsmith(__dirname)
   .use(autoprefix())
   .use(collections({
     posts: {
-      pattern: 'posts/*.md'
+      pattern: 'posts/*.md',
+      sortBy: 'date',
+      reverse: true,
     },
     pages: {
       pattern: 'pages/*.md'

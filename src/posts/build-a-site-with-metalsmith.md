@@ -2,6 +2,7 @@
 title: "Moving from WordPress to a static site generator"
 date: 2015-12-20
 layout: post.hbs
+collection: posts
 tags: demo, wordpress
 ---
 
