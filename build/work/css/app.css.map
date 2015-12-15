@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "app.css",
+	"sources": [
+		"app.scss"
+	],
+	"sourcesContent": [
+		"body {\n  background: green;\n}\n"
+	],
+	"mappings": "AAAA,IAAI,AAAC,CACH,UAAU,CAAE,KAAM,CACnB",
+	"names": []
+}

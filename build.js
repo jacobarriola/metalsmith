@@ -4,6 +4,9 @@ var metalsmith  = require('metalsmith'),
     collections = require('metalsmith-collections'),
     permalinks  = require('metalsmith-permalinks'),
     serve       = require('metalsmith-serve'),
+    sass        = require('metalsmith-sass'),
+    autoprefix  = require('metalsmith-autoprefixer'),
+    excerpts    = require('metalsmith-excerpts'),
     watch       = require('metalsmith-watch');
 
 /**
@@ -16,6 +19,12 @@ metalsmith(__dirname)
       title: 'Jacob Arriola'
     }
   })
+  .use(sass({
+    outputDir: 'css/',
+    sourceMap: true,
+    sourceMapContents: true
+  }))
+  .use(autoprefix())
   .use(collections({
     posts: {
       pattern: 'posts/*.md'
@@ -25,6 +34,7 @@ metalsmith(__dirname)
   .use(permalinks({
     pattern: ':title'
   }))
+  .use(excerpts())
   .use(layouts({
     engine:'handlebars',
     partials: 'partials'
