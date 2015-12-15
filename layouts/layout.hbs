@@ -1,13 +1,13 @@
 {{> header}}
 
-<article>
-  <ul>
+<div class="container">
+  <ul class="home-loop">
     {{#each collections.posts}}
         <li>
-            <h3><a href="{{this.path}}">{{this.title}}</a></h3>
+            <h2><a href="{{this.path}}">{{this.title}}</a></h2>
             <article>{{{this.excerpt}}}</article>
         </li>
     {{/each}}
   </ul>
-</article>
+</div>
 {{> footer}}
