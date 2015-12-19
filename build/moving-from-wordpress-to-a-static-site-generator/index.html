@@ -1,27 +1,36 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link href="https://fonts.googleapis.com/css?family=PT+Sans:700|Raleway:300" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=PT+Sans:700|Raleway:300' rel='stylesheet' type='text/css'>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, intial-scale=1">
     <title>Moving from WordPress to a static site generator | Jacob Arriola</title>
     <script src="http://localhost:35729/livereload.js"></script>
-    <link rel="stylesheet" href="/metalsmith/css/app.css" media="all" type="text/css">
+    <link rel="stylesheet" href="/css/app.css" media="all" type="text/css">
   </head>
   <body>
     <header class="masthead">
       <nav>
-        <a href="/metalsmith/">Home</a>
-        <a href="/metalsmith/about">About</a>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
       </nav>
-      <section class="header-notice">/* Excuse the mess, I&apos;m actively rebuilding this site using <a href="http://metalsmith.io">metalsmith</a>*/</section>
+      <section class="header-notice">/* Excuse the mess, I'm actively rebuilding this site using <a href="http://metalsmith.io">metalsmith</a>*/</section>
     </header>
 <div class="container">
   <h1>Moving from WordPress to a static site generator</h1>
   <time>Sat Dec 19 2015 16:00:00 GMT-0800 (PST)</time>
-  demo, wordpress
-  <p>I&apos;ve rebuilt my site using a static site generator.</p>
+  <div class="tags">demo, WordPress</div>
+  <p>First of all, I have nothing against WordPress; it&#39;s a wonderful software
+that solves many business problems. In fact, I develop a lot of applications/sites
+using WordPress. The problem is, for my site, WordPress was no longer a viable
+solution to my needs.</p>
 <h2 id="why">Why</h2>
+<h3 id="1-i-don-t-have-time-to-mess-with-databases">1. I don&#39;t have time to mess with databases</h3>
+<p>Because I&#39;m not writing many articles, I just don&#39;t want to have to manage
+databases, especially dealing with crazy security threats that I wouldn&#39;t know
+how to manage/triage.</p>
+<h3 id="2-i-don-t-have-time-for-software-updates">2. I don&#39;t have time for software updates</h3>
+<h3 id="3-i-don-t-have-time-for-plugin-updates">3. I don&#39;t have time for plugin updates</h3>
 <h2 id="steps">Steps</h2>
 <h3 id="step-1">Step 1</h3>
 <p>Start with a skeleton project of <code>build.js</code>, <code>package.json</code>, and <code>src/</code> directory</p>
@@ -33,7 +42,7 @@
 </div>
 <footer class="site-footer">
   <div class="">
-    <h3 class="footer-heading">Let&apos;s Connect</h3>
+    <h3 class="footer-heading">Let's Connect</h3>
     <ul class="social-media-list">
       <li><a href="https://github.com/jacobarriola">Github</a></li>
       <li><a href="https://twitter.com/jacobarriola">Twitter</a></li>
@@ -41,7 +50,7 @@
   </div>
   <div class="">
     <h3 class="footer-heading">Built With</h3>
-    <ul class="built-with-list">
+    <ul class='built-with-list'>
       <li><a href="http://metalsmith.io">Metalsmith</a></li>
       <li><a href="http://sass-lang.com">Sass</a></li>
       <li><a href="http://handlebarsjs.com">Handlebars</a></li>
